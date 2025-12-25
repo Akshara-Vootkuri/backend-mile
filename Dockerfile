@@ -12,6 +12,4 @@ RUN ./mvnw dependency:go-offline
 COPY src src
 RUN ./mvnw clean package -DskipTests
 
-EXPOSE 8082
-
 CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
